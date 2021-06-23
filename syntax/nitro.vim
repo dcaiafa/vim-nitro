@@ -21,7 +21,7 @@ hi def link nitroException  Exception
 syn keyword nitroStatement  return defer
 hi def link nitroStatement  Statement
 
-syn keyword nitroKeyword    func var not meta 
+syn keyword nitroKeyword    func var not
 hi def link nitroKeyword    Keyword
 
 syn keyword nitroBoolean    true false 
@@ -33,6 +33,9 @@ hi def link nitroComment    Comment
 syn region nitroString      start=+"+ skip=+\\"+ end=+"+
 syn region nitroString      start="r\?`" end="`"
 hi def link nitroString     String
+
+syn match nitroMetaParam    "^meta param\>"
+hi def link nitroMetaParam  Keyword
 
 syn match nitroDecimalInt   "\<-\=\(0\|[1-9]_\?\(\d\|\d\+_\?\d\+\)*\)\%([Ee][-+]\=\d\+\)\=\>"
 hi def link nitroDecimalInt Number
