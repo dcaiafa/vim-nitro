@@ -18,6 +18,6 @@ function! s:nitrofiletype_post()
   let &g:fileencodings = s:current_fileencodings
 endfunction
 
-au BufNewFile *.n setlocal filetype=nitro fileencoding=utf-8 fileformat=unix tabstop=2 shiftwidth=2 expandtab
-au BufRead *.n call s:nitrofiletype_pre()
-au BufReadPost *.n call s:nitrofiletype_post()
+au BufNewFile *.n,*.b3 setlocal filetype=nitro fileencoding=utf-8 fileformat=unix tabstop=2 shiftwidth=2 expandtab
+au BufRead *.n,*.b3 call s:nitrofiletype_pre()
+au BufReadPost *.n,*.b3 call s:nitrofiletype_post()
